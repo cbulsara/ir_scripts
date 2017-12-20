@@ -21,9 +21,6 @@ def getKeys(path):
     return keys
 
 def urlVoid(api_key, api_id, url, out):
-    #api_key = '2e4086a69c53d0f9120bf280729ba10bc5a7dc0a'
-    #api_id = 'api1000'
-    #url = 'google.com'
     preamble = 'http://api.urlvoid.com'
     filename = out + "_urlvoid.xml"
     request = preamble + '/' + api_id + '/' + api_key + '/' + 'host' + '/' + url
@@ -49,7 +46,7 @@ def urlVoid(api_key, api_id, url, out):
 
 def getLinkInfo(url, out):
     preamble = 'http://www.getlinkinfo.com/info?link='
-    #url = 'google.com'
+
     filename = out + "_linkInfo.html"
     
     request = preamble + url
@@ -67,11 +64,9 @@ def getLinkInfo(url, out):
 
 def screenPrintMachine(api_key, url, out):
     preamble = 'http://api.screenshotmachine.com/?'
-    #api_key = 'f427b9'
     dimension = '1024xfull'
     format = 'png'
     cacheLimit = '1'
-    #url = 'www.google.com'
     filename = out + "_scmachine.png"
 
     request = preamble + 'key=' + api_key + '&' + 'dimension=' + dimension + '&' + 'format=' + format + '&' + 'cacheLimit=' + cacheLimit + '&' + 'url=' + url
